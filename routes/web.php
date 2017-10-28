@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'LinksController@index');
+
+Route::post('/create', 'LinksController@create');
+
+Route::get('/{link}', 'LinksController@redirect');
