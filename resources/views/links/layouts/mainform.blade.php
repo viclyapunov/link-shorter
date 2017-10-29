@@ -1,11 +1,14 @@
 @extends('links.layouts.master')
 @section('content')
-     <form class="form-signin" method="POST" action="create">
-       {{ csrf_field() }}
-        <h2 class="form-signin-heading">Short URL generator</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="text" name="original_url" id="inputEmail" class="form-control" placeholder="http://example.com" required autofocus>
+<form method="POST" action="create">
+  {{ csrf_field() }}
+  <div class="group">
+    <input type="text" name="original_url" required autofocus><span class="highlight"></span><span class="bar"></span>
+    <label>Enter url:</label>
+  </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Get short url!</button>
-      </form>
+  <button type="submit" class="button buttonBlue">Get short URL!
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+  </button>
+</form>
 @endsection
